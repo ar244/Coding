@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript">
+		//document.ready(function() {
+			var btn;
+			var arr = [0, 1, 2, 3, 4];
+			arr.forEach(function(x, i) {
+				 btn = document.createElement("button");
+				btn.innerHTML = "Button "+x;
+				btn.addEventListener("click", function() {
+					console.log(btn.innerHTML);
+						});
+				document.body.appendChild(btn);
+			});
+		//});
+	</script>
+</body>
+</html>
+

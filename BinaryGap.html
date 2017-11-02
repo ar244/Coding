@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var bg = function (n) {
+			var binary = n.toString(2);
+			console.log(binary);
+
+			if (binary.length === 0) return 0;
+
+			var count =0 ;
+			var ans =0;
+			var inPattern = false;
+			for (var i=0; i<binary.length; i++) {
+				if (binary[i] === "1") { 
+					
+						if (binary[i-1] === "0") {
+							// ending pattern
+							if (count > ans) {
+								ans=count;
+								
+								console.log("ending pattern " + i);
+							}
+							inPattern = false;
+							count=0;
+						}
+						if (binary[i+1] === "0") {
+							inPattern = true;
+						} 
+					
+				} else {
+					if (binary[i] === "0" && (inPattern)) {
+						count++;
+					}
+				}
+
+			}
+			return ans;
+		}
+		console.log("15 "+ bg(15));
+		console.log("1041 "+ bg(1041));
+		console.log("87932432897 "+ bg(87932432897));
+	</script>
+</body>
+</html>
