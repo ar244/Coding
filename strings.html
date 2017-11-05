@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var str1 = "w3resource";
+		var str = str1.split("");
+		console.log(str);
+		var x = str.pop();
+		str.unshift(x);
+		console.log(str);
+
+		function combo(string) {
+			var set = []; // this is what we will add the substrings to
+			for (i = string.length; i > 0; i--) { // "i" is going to be the end point of our substring, so this makes sure we go through all possible iterations
+			for (j = 0; j < i; j++) { //"j" is the start point of our substring, so this makes sure it goes through all possible iterations without overtaking our end point
+			var instance = string.substring(j,i); // this makes the substring. yay.
+			set.push(instance); // this adds the substring to our array
+			}
+			}
+			set.join(", "); //yada yada
+			return(set); // " "
+			}
+
+			console.log(combo("dog"));
+	</script>
+</body>
+</html>

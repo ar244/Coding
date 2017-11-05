@@ -1,0 +1,9 @@
+function wrap1 (n) {
+	var localVar = n;
+	return function() {console.log(n);};
+}
+
+var w = wrap(1));
+console.log(w());
+//will print 1
+
